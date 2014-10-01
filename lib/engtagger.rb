@@ -363,7 +363,7 @@ class EngTagger
   def get_gerund_verbs(tagged)
     return nil unless valid_text(tagged)
     VBG
-    trimmed = tagged.scan(VB).map do |n|
+    trimmed = tagged.scan(VBG).map do |n|
       strip_tags(n)
     end
     ret = Hash.new(0)
